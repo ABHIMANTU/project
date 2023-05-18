@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div>
+        <label>PRODUCT NAME</label>
+        <input type="text" id="name">
+        <br><br>
+
+        <label>PRODUCT PRICE</label>
+        <input type="number" id="p">
+        <br> <br>
+
+        <label>DISRIPTION</label>
+        <input type="text" id="d">
+        <br> <br>
+
+        <label>Discount</label>
+        <select id="dis">
+            <option value="Flat">Flat</option>
+            <option value="Percent">Percent</option>
+        </select>
+        <br><br>
+        <label for=""> discount value</label>
+        <input type="number" id="value">
+        <label>CHOOSE A TAX =</label>
+
+        <select id="tax">
+            <option value="5">5%</option>
+            <option value="10">10%</option>
+            <option value="15">15%</option>
+            <option value="20">20%</option>
+
+        </select>
+        <br> <br>
+
+
+
+
+    </div>
+
+    <div id="newdiv"></div>
+
+
+
+    <script>
+        const pname = document.getElementById("name");
+        const price = document.getElementById("p");
+        const description = document.getElementById("d");
+        const dis = document.getElementById("dis");
+        const value = document.getElementById("value");
+        const tax = document.getElementById("tax");
+
+
+        function calculateDiscount(price, dis, value) {
+            if (dis.value === 'Percent') {
+                return price.value - (price.value * value.value) / 100;
+            } else if (dis.value === 'Flat') {
+                return price.value - value.value;
+            } else {
+                return price.value;
+            }
+        }
+
+
+        function calculateTotal(discounted, tax) {
+            return discounted + (discounted * tax.value) / 100;
+        }
+
+        function abc() {
+            const discounted = calculateDiscount(price, dis, value);
+            const total = calculateTotal(discounted, tax);
+
+            const Div1 = document.getElementById("newdiv");
+            Div1.innerHTML = "";
+
+            const nameA = document.createElement("p");
+            const priceA = document.createElement("p");
+            const descriptionA = document.createElement("p");
+            const disA = document.createElement("p");
+            const valueA = document.createElement("p");
+            const discountedA = document.createElement("p");
+            const taxA = document.createElement("p");
+            const totalA = document.createElement("p");
+            
+            nameA.textContent = "product name " + pname.value;
+            priceA.textContent = "product price " + price.value;
+            descriptionA.textContent = "description " + description.value;
+            disA.textContent = "discount type " + dis.value;
+            valueA.textContent = "discount value " + value.value;
+            discountedA.textContent = "discounted price " + discounted;
+            taxA.textContent = "tax " + tax.value + "%";
+            totalA.textContent = "total " + total;
+
+            Div1.appendChild(nameA);
+            Div1.appendChild(priceA);
+            Div1.appendChild(descriptionA);
+            Div1.appendChild(disA);
+            Div1.appendChild(valueA);
+            Div1.appendChild(discountedA);
+            Div1.appendChild(taxA);
+            Div1.appendChild(totalA);
+        }
+
+        pname.addEventListener("keyup", abc);
+        price.addEventListener("keyup", abc);
+        description.addEventListener("keyup", abc);
+        dis.addEventListener("change", abc);
+        value.addEventListener("keyup", abc);
+        tax.addEventListener("change", abc);
+
+    </script>
+
+
+</body>
+
+</html>

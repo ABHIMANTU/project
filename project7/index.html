@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <select id="mySelect">
+    <option value="hair">Hair</option>
+    <option value="nose">Nose</option>
+  </select>
+&nbsp;
+<button type="button" onclick="myF()">Add New Option</button>
+<script>
+function myF() {
+  var x = document.getElementById("mySelect");
+  var option = document.createElement("option");
+  option.value = "hand";
+  console.log(option.value);
+  option.text = "Hand";
+  x.add(option);
+}
+</script>
+</body>
+</html>

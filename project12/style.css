@@ -1,0 +1,26 @@
+.alert{
+    padding: 25px;
+    border-radius: 20px;
+    border: 2px solid gold;
+    display: none;
+}
+[order-state="new"]
+{
+    background-color: rgb(173, 22, 118);
+}
+[order-state="pending"]
+{
+    background-color: yellow;
+}
+[order-state="processing"]
+{
+    background-color: blue;
+}
+[order-state="complete"]
+{
+    background-color: red;
+}
+[order-state="cencil"]
+{
+    background-color: green;
+}

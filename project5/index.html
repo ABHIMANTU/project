@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Product Details</h2>
+        <div class="form">
+            <label for="Product_Name">Prodcut Name</label>
+            <input type="text" name="" id="Product_Name">
+
+            <label for="Current_price">Current Price</label>
+            <input type="number" name="" id="Product_Cost">
+
+            <label for="Selling_price">Selling_price</label>
+            <input type="number" name="" class="sell" id="Selling_Price">
+
+            <label for="Product_Name">Discount_Type</label>
+            <select name="discount" id="dis_option">
+                <option value="">Select Type</option>
+                <option class="discount" value="Flat">Flat</option>
+                <option class="discount" value="Percent">Percent</option>
+            </select>
+
+            <label for="Product_Name">Discount_Value</label>
+            <input type="number" id="dis_value">
+
+            
+            <label for="Tax">Tax</label>
+            <select name="Tax" class="option" id="tax_option" >
+                <option value="">Select</option>
+                <option class="tax" value="0">0</option>
+                <option class="tax" value="5">5%</option>
+                <option class="tax" value="12">12%</option>
+                <option class="tax" value="18">18%</option>
+                <option class="tax" value="28">28%</option>
+            </select>
+
+            
+
+            <br>
+            <button id="btn">SUBMIT</button>
+        </div>
+    </div>
+
+    <div class="table">
+        <p class="heading">Bill Deatils</p>
+        <div class="table_details">
+            <table id="myTable">
+                <thead>
+                    <tr>
+                        <!-- <th>S.NO</th> -->
+                        <th>Product_Name</th>
+                        <th>Product_Cost</th>
+                        <th>Selling_Price</th>
+                        <th>Discount</th>
+                        <th>Discount_value</th>
+                        <th>Tax</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
+    <script src="js.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="chart">
+            <h6>PRODUCT NAME</h6>
+            <input type="text" name="" id="PRODUCT_NAME">
+
+            <H6>PRODUCT PRICE</H6>
+            <input type="number" name="" id="PRODUCT_PRICE">
+
+            <H6>PRODUCT DISCRIPTION</H6>
+            <textarea name="" id="DISCRIPTION" cols="30" rows="3"></textarea>
+
+            <H6>PRODUCT DISCOUNT TYPE</H6>
+            <select name="" id="DISCOUNT_TYPE">
+                <option value="None">None</option>
+                <option value="FLAT">FLAT</option>
+                <option value="PERCENT">PERCENT</option>
+            </select>
+
+            <H6>PRODUCT DISCOUNT</H6>
+            <input type="number" name="" id="DISCOUNT">
+
+            <H6>PRODUCT TAX</H6>
+            <select name="" id="TAX">
+                <option value="0">select</option>
+                <option value="5">5%</option>
+                <option value="12">12%</option>
+                <option value="18">18%</option>
+                <option value="25">28%</option>
+            </select>
+
+            <button id="btn">CLEAR</button>
+        </div>
+
+        <div class="billform">
+            <h2>product details</h2>
+            <p>PRODUCT NAME : <span id="name"></span></p>
+            <p>PRICE : <span id="price"></span></p>
+            <p>DISCRIPTION : <span id="disc"></span></p>
+            <p>DISCOUNT_TYPE : <span id="dis_type"></span></p>
+            <p>DISCOUNT AMOUNT : <span id="dis_amount"></span></p>
+            <p>AFTER DISCOUNT AMOUNT : <span id="discount_amt"></span></p>
+            <p>TAXABLE AMOUNT : <span id="tax_amt"></span></p>
+        </div>
+    </div>
+
+    <!-- <script src="js.js"></script> -->
+    <script src="java.js"></script>
+</body>
+
+</html>

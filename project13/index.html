@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/css/multi-select-tag.css">
+</head>
+<body>
+    <form action="" method="get">   
+        <div>
+            <label for="city">Countries</label>
+            <select name="countries" id="countries" multiple>
+                <option value="1">USA</option>
+                <option value="2">FRANCE</option>
+                <option value="3">BRAZIL</option>
+                <option value="4">CANADA</option>
+                <option value="5">MAXICO</option>
+                <option value="6">GARMANY</option>
+                <option value="7">ESTONIYA</option>
+                <option value="8">LATVIYA</option>
+                <option value="9">PURTGUE</option>
+                <option value="10">ITLI</option>
+                <option value="11">SPAIN</option>
+                <option value="12">EGYPT</option>
+
+            </select>
+        </div>
+    </form>
+    
+
+
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/js/multi-select-tag.js"></script>
+    <script>
+        // new MultiSelectTag('countries')  // id
+
+        new MultiSelectTag('countries', {
+            rounded: true,    // default true
+            shadow: true      // default false
+        })
+    </script>
+</body>
+</html>

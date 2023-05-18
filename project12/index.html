@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 60%;
+            height: 10vh;
+            text-align: center;
+            margin-top: 50px;
+            border: 1px solid black;
+        }
+        
+        tr {
+          border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body id="mybody">
+    
+
+    <table>
+
+            <tr>
+                <th>ID</th>
+                <th>PRODUCT</th>
+                <th>COST PRICE</th>
+                <th>SELLING PRICE</th>
+                <th>STATUS</th>
+                <th>ACTION</th>
+            </tr>
+
+            <tr>
+                <th>1</th>
+                <th>pan</th>
+                <th>1200</th>
+                <th>1000</th>
+                <th>NEW</th>    
+                <th>
+                    <button btn-type="new">NEW</button>
+                    <button btn-type="pending">PENDIND</button>
+                    <button btn-type="processing">PROCESSING</button>
+                    <button btn-type="complete">COMPLETE</button>
+                    <button btn-type="cencil">CENCIL</button>
+                </th>
+            </tr>
+
+    </table>
+
+    <div class="alert" id="div" order-state="new">
+        message
+    </div>
+
+    <script>
+        const btn = document.querySelectorAll('[btn-type]');
+        
+        for(const btn_item of btn){
+            btn_item.addEventListener('click', showAlert);
+        }
+
+        function showAlert(){
+            // let div = document.querySelector("#div");
+            let x = event.target.getAttribute('btn-type');
+            let elm = document.querySelector('.alert');
+            elm.style.display = 'block';
+            elm.setAttribute('order-state',x);
+            setTimeout(function(){
+                elm.style.display='none';
+                // div.textContent = x;
+            },5000)
+        }
+    </script>
+    
+    <script src="js.js"></script>
+</body>
+</html>

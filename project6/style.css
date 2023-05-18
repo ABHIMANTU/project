@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    box-sizing: border-box;
+}
+.header{
+    width: 100%;
+    text-align: center;
+    color: red;
+    font-size: 40px;
+    font-style: oblique !important;
+}
+.contanier{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-top: 25px;
+}
+.item{
+    width: 50%;
+    height: auto;
+    position: relative;
+}
+.add_cart{
+    width:50%;
+    height: auto;
+    position: absolute;
+    top: 60px;
+    left: 650px;
+    border: 2px solid black;
+}
+.add_cart p{
+    text-align: center;
+    color: aqua;
+
+}
+.dish{
+    width: 25%;
+    border: 2px solid black;
+    display: inline-block;
+}
+img{
+    width: 50%;
+    border-radius: 50px;
+}
+.dish i{
+    color: orange;
+}
+table{
+    /* font-size: 15px; */
+    padding: 15px;
+    word-spacing: 10px;
+}

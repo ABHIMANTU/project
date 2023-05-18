@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="checkbox" id="html" class="pl" value="html">
+    <label for="vehicle1"> HTML</label><br>
+    <input type="checkbox" id="css" class="pl" value="css">
+    <label for="vehicle2"> CSS</label><br>
+    <input type="checkbox" id="javascript" class="pl" value="javascript">
+    <label for="vehicle3"> JAVASCRIPT</label><br><br>
+    <input type="checkbox" id="sql" class="pl" value="sql">
+    <label for="vehicle1"> SQL</label><br>
+    <input type="checkbox" id="mongoDB" class="pl" value="mongoDB">
+    <label for="vehicle2"> MONGO_DB</label><br>
+    <input type="checkbox" id="firebase" class="pl" value="firebase">
+    <label for="vehicle3"> FIREBASE</label><br><br>
+    <input type="checkbox" id="java" class="pl" value="java">
+    <label for="vehicle1"> JAVA</label><br>
+    <input type="checkbox" id="python" class="pl" value="python">
+    <label for="vehicle2"> PYTHON</label><br>
+    <input type="checkbox" id="c++" class="pl" value="c++">
+    <label for="vehicle3"> C++</label><br><br>
+    
+    <input id="btn" type="submit" value="Submit">
+
+    <script>
+
+        var c1 = document.querySelector("#html");
+        var c2 = document.querySelector("#css");
+        var c3 = document.querySelector("#javascript");
+        var c4 = document.querySelector("#sql");
+        var c5 = document.querySelector("#mongoDB");
+        var c6 = document.querySelector("#firebase");
+
+
+        // var final = document.querySelectorAll(".pl");
+        // console.log(final);
+
+        document.getElementById('btn').onclick = function() {  
+            var markedCheckbox = document.getElementsByClassName('pl');
+            for (var checkbox of markedCheckbox) {  
+                if (checkbox.checked) {  
+                    console.log(checkbox.value); 
+                    document.body.append(checkbox.value + ' , ');
+                }               
+            }                         
+        }
+
+
+        c2.addEventListener("click", chek)
+        c3.addEventListener("click", chek)
+        c4.addEventListener("click", chek2)
+        
+
+        function chek(){
+            if(c2.checked == true){
+                c1.checked = true;
+            }
+            else if(c3.checked == true){ 
+                c2.checked = true;
+                c1.checked = true;
+            }
+        }
+
+        function chek2(){
+            if(c4.checked == true){
+                c5.checked = true;
+                c6.checked = true;
+            }
+        }
+
+
+        // function chek(){
+        //     if(c2.checked == true){
+        //         c1.checked = true;
+        //     }
+        //     else if(c3.checked == true){ 
+        //         c2.checked = true;
+        //         c1.checked = true;
+        //     }
+        //     else if(c4.checked == true){
+        //         c5.checked = true;
+        //         c6.checked = true;
+        //     }
+        // }
+
+
+
+        // document.body.append(checkbox.value + ' ');  
+        // console.log(checkbox.value);
+
+        // c2.addEventListener('onclick', function(){
+        //     c1.checked = true;
+        // });
+
+
+    
+        
+        
+    </script>
+</body>
+</html>

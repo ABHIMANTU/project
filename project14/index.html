@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/css/multi-select-tag.css">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="section">
+            <label for="product">PRODUCT : </label>
+            <select name="product" id="product" multiple>
+                <option value="CLOTHS">CLOTHS</option>
+                <option value="MOBILE">MOBILE</option>
+                <option value="ELTRONICS">ELTRONICS</option>
+                <option value="AUTOMOBILES">AUTOMOBILES</option>
+            </select>
+
+            <label for="veraity">VERAITY : </label>
+            <select name="veraity" id="veraity" multiple>
+                <option value="v1">SIZE</option>
+                <option value="v2">color</option>
+                <option value="v3">DESIGN</option>
+                <option value="v4">TYPE</option>
+
+            </select>
+        </div>
+
+        <button id="btn">SUBMIT</button> 
+
+        <br><br>
+        <hr>
+        <br><br>
+
+        <div class="footer">
+            <!-- <div class="appd">
+                <input type="number" name="" id="sno" placeholder="S.NO">
+
+                <input type="text" name="" id="p_name" placeholder="PRODUCT">
+
+                <input type="text" name="" id="cost" placeholder="COST">
+
+                <input type="text" name="" id="tax" placeholder="TAX">
+
+                <textarea name="" id="discription" cols="20" rows="" placeholder="DISCRIPTION"></textarea>
+            </div> -->
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/js/multi-select-tag.js"></script>
+    <script>
+        // new MultiSelectTag('countries')  // id
+
+        new MultiSelectTag('product')
+        new MultiSelectTag('veraity')
+    </script>
+
+    <script>
+        
+        const btn = document.querySelector("#btn");
+        btn.addEventListener("click", karo);
+
+        function karo(){
+            var selected = [];
+            var veraity = [];
+
+            for( var option of document.querySelector("#product")){
+                if(option.selected){
+                    selected.push(option.value)
+                }
+            } 
+            for( var option of document.querySelector("#veraity")){
+                if(option.selected){
+                    veraity.push(option.value)
+                }
+            } 
+        
+            for(var i=0; i<selected.length; i++ ){
+                for(var j = 0; j<veraity.length; j++){
+                    box();
+                }               
+            }            
+        }
+
+        function box(){
+            const footer = document.querySelector(".footer");
+
+            const div = document.createElement("div");
+            div.setAttribute('class','appd');
+
+            const a = document.createElement('input');
+            const b = document.createElement('input');
+            const c = document.createElement('input');
+            const d = document.createElement('input');
+            const e = document.createElement('textarea');
+
+            div.appendChild(a);
+            div.appendChild(b);
+            div.appendChild(c);
+            div.appendChild(d);
+            div.appendChild(e);
+
+            footer.appendChild(div);
+        }
+    </script>
+</body>
+</html>
